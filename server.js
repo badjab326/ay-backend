@@ -24,14 +24,6 @@ mongoose.connection
 .on('connected', () => console.log('connected to MongoDB'))
 .on('error', (err) => console.log('Error with MongoDB: ' + err.message));
 
-// MODELS
-const PersonSchame = new.mongoose.Schema({
-    name: String,
-    image: String,
-}, {timestamps: true});
-
-const Person = mongoose.model('Person', personSchema);
-
 // MIDDLEWARE
 app.use(cors()); 
 app.use(morgan("dev")); 
@@ -42,56 +34,9 @@ app.get('/', (req, res) => {
     res.send("Welcome to the Yearbook");
 })
 
-// I
+app.use('/july22', require('./controllers/avatar-yearbook'));
 
-app.get('/', async (req, res) => {
-    try {
-        res.json(await Person.find({}));
-    } catch (error) {
-        console.log('error: ', error);
-        res.json({error: 'something went wrong - check console'});
-    }
+// LISTENER
+app.listen(PORT, () => {
+    console.log(`Express is listening on port: ${PORT}`)
 });
-
-// N
-
-
-
-// D
-
-app.delete('/person/:id', async ( req, res) => {
-    try {
-        res.json(await Person.findByIdAndDelete(req.params.id));
-    }  catch (error) {
-        console.log('error: ', error);
-        res.json({error: 'something went wrong - check console'});
-    }
-});
-
-// U
-
-app.put('/person/:id', async (res, req) => {
-    try {
-        res.json(await Person.findByIdAndUpdate(
-        req.params.id,
-        req.body,
-        {new: true}))
-    } catch (error) {
-        console.log('error: ', error)
-        res.json({error: 'something went wrong - check console'})
-    }
-})
-
-// C
-
-app.post('/person', async (req, res) => {
-    try {
-        const person = await Person.create(req.body);
-        res.json(person);
-    } catch (error) {
-        console.log('error: ', error);
-        res.json({error: 'something went wrong - check console'});
-    }
-});
-
-// E
