@@ -5,8 +5,10 @@ const personSchema = new mongoose.Schema({
     picture: String,
     linkedin: String,
     github: String,
+    portfolio: String,
     location: String,
     instagram: String,
+    quote: String,
     nation: String,
     gaming: {
         steam: String,
