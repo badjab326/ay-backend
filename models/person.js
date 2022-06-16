@@ -4,15 +4,19 @@ const personSchema = new mongoose.Schema({
     name: String,
     picture: String,
     linkedin: String,
+    github: String,
     location: String,
     instagram: String,
-    steam: String,
-    xbox: String,
-    sonypsn: String,
-    nintendo: String,
-    favbook: String,
-    favmovie: String,
-    favgame: String
+    nation: String,
+    gaming: {
+        steam: String,
+        xbox: String,
+        sonypsn: String,
+        nintendo: String},
+    favorites: {
+        favbook: String,
+        favmovie: String,
+        favgame: String}
 });
 
 const Person = mongoose.model('Person', personSchema);
