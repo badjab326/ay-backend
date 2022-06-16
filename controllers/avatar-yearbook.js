@@ -40,7 +40,7 @@ router.put('/:id', async (req, res) => {
 // Delete
 router.delete('/:id', async (req, res) => {
     try {
-        res.json(await Cheese/findByIdAndDelete(req.params.id))
+        res.json(await Person.findByIdAndDelete(req.params.id))
     } catch (error) {
         console.log('error', error)
         res.json({error: 'something went wrong - check console'})
