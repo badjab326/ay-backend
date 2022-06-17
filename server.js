@@ -29,12 +29,8 @@ app.use(cors());
 app.use(morgan("dev")); 
 app.use(express.json());
 
-// ROUTES
-app.get('/', (req, res) => {
-    res.send("Welcome to the Yearbook");
-})
-
-app.use('/july22', require('./controllers/avatar-yearbook'));
+// ROUTES / LINK TO CONTROLLER
+app.use('/', require('./controllers/avatar-yearbook'));
 
 // LISTENER
 app.listen(PORT, () => {
