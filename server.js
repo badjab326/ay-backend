@@ -3,13 +3,13 @@ require("dotenv").config();
 
 // Pull PORT from .env, give default value of 4000
 // Pull MONGODB_URL from .env
-const { PORT = 4000, MONGODB_URL } = process.env;
+const { PORT = 4000, MONGODB_URL, FIREBASESERVICEKEY } = process.env;
 
 // Import Firebase for authentication
 const admin = require('firebase-admin');
 
 admin.initializeApp({
-  credential: admin.credential.cert(require('./firebase-service-key.json'))
+  credential: admin.credential.cert(JSON.parse(atob(FIREBASESERVICEKEY)))
 });
 
 // Import express
