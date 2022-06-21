@@ -3,6 +3,14 @@ const express = require('express');
 const Person = require ('../models/person');
 const router = express.Router();
 
+function isAuthenticated(req, res, next) {
+    if(!req.user) {
+        return res.status(401).json({message: 'you must be logged in'})
+    } else {
+        return next()
+    }
+}
+
 // Routes
 // Index 
 router.get('/', async (req, res) => {
@@ -15,7 +23,7 @@ router.get('/', async (req, res) => {
 });
 
 // Create
-router.post('/', async (req, res) => {
+router.post('/', isAuthenticated, async (req, res) => {
     try {
         res.json(await Person.create(req.body))
     } catch (error) {
@@ -25,7 +33,7 @@ router.post('/', async (req, res) => {
 });
 
 // Update
-router.put('/:id', async (req, res) => {
+router.put('/:id', isAuthenticated, async (req, res) => {
     try {
         res.json(await Person.findByIdAndUpdate(
         req.params.id,
@@ -38,7 +46,7 @@ router.put('/:id', async (req, res) => {
 });
 
 // Delete
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', isAuthenticated, async (req, res) => {
     try {
         res.json(await Person.findByIdAndDelete(req.params.id))
     } catch (error) {

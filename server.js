@@ -5,6 +5,13 @@ require("dotenv").config();
 // Pull MONGODB_URL from .env
 const { PORT = 4000, MONGODB_URL } = process.env;
 
+// Import Firebase for authentication
+const admin = require('firebase-admin');
+
+admin.initializeApp({
+  credential: admin.credential.cert(require('./firebase-service-key.json'))
+});
+
 // Import express
 const express = require("express");
 
@@ -28,6 +35,17 @@ mongoose.connection
 app.use(cors()); 
 app.use(morgan("dev")); 
 app.use(express.json());
+app.use(async (req, res, next) => {
+    const token = req.get('Authorization')
+    if(token) {
+        const user = await admin.auth().verifyIdToken(token.replace('Bearer ', ''));
+        req.user = user;
+    } else {
+        req.user = null;
+    }
+
+    next();
+})
 
 // ROUTES / LINK TO CONTROLLER
 app.use('/', require('./controllers/avatar-yearbook'));
