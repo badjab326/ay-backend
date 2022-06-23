@@ -1,8 +1,9 @@
 ### Avatar Yearbook
 
-The ‘Avatar Yearbook’ - a one-stop-shop to look up members of the SEIR "Avatar"  cohort. No need to jump through 3 applications for someone’s LinkedIn or GitHub profile. Instead, stop over at the ‘Avatar Yearbook’ where you can look through our cohort to find anything and everything we’ve chosen to share. From social media, to gaming links, to book suggestions - we’re looking to get our cohort in one place to stay connected, indefinitely.
+The ‘Avatar Yearbook’ - a one-stop-shop to look up members of the SEIR "Avatar"  cohort. No need to jump through 3 applications for someone’s LinkedIn or GitHub profile. Instead, stop over at the ‘Avatar Yearbook’ where you can look through our cohort to find anything and everything we’ve chosen to share. From social media, to gaming links, to book suggestions - we’re looking to get our cohort in one place to stay connected, indefinitely
 
 ---
+
 ### Technologies Used
  - CSS
  - Express
@@ -26,6 +27,8 @@ The ‘Avatar Yearbook’ - a one-stop-shop to look up members of the SEIR "Avat
 ---
 ### Screenshot
 
+![image](https://user-images.githubusercontent.com/104465292/175374705-aa2d99bf-0ea8-43d4-85ec-317791371791.png)
+![image](https://user-images.githubusercontent.com/104465292/175374836-35985d5e-4911-44b5-9c22-7cdb6be774dc.png)
 
 ---
 ### Future Enhancement
@@ -37,4 +40,4 @@ The ‘Avatar Yearbook’ - a one-stop-shop to look up members of the SEIR "Avat
 ---
  
  ### Getting Started
-  [Deployment](https://avatar-yearbook.netlify.app/)
+  [Avatar Yearbook](https://avatar-yearbook.netlify.app/)
