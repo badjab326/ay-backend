@@ -35,8 +35,8 @@ The ‘Avatar Yearbook’ - a one-stop-shop to look up members of the SEIR "Avat
 
  - As a user, I want to leave comments on a person's show page
  - As a user, I want to see the person's location on a map
- - As a user, i want to click on a link to a person's favorites
- 
+ - As a user, I want to click on a link to a person's favorites
+ - As a user, I want to make a search bar to make user easily look up
 ---
  
  ### Getting Started
