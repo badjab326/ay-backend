@@ -1,6 +1,6 @@
 ### Avatar Yearbook
 
-The ‘Avatar Yearbook’ - a one-stop-shop where users are able to share everything their heart desires. No need to jump through 3 applications for someone’s LinkedIn or GitHub profile. Instead, stop over at the ‘Avatar Yearbook’ where you can search through our cohort to find anything and everything we’ve chosen to share. Ranging from social media links to hobbies, book suggestions to comments- we’re looking to get our cohort in one place to stay connected, indefinitely.
+The ‘Avatar Yearbook’ - a one-stop-shop to look up members of the SEIR "Avatar"  cohort. No need to jump through 3 applications for someone’s LinkedIn or GitHub profile. Instead, stop over at the ‘Avatar Yearbook’ where you can look through our cohort to find anything and everything we’ve chosen to share. From social media, to gaming links, to book suggestions - we’re looking to get our cohort in one place to stay connected, indefinitely.
 
 ---
 ### Technologies Used
