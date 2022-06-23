@@ -21,7 +21,7 @@ The ‘Avatar Yearbook’ - a one-stop-shop where users are able to share everyt
 ### Wireframe
 
 ![image](https://user-images.githubusercontent.com/104465292/175311921-1bf4a845-d5a5-4161-a592-eefd97ead6df.png)
-![image](https://user-images.githubusercontent.com/104465292/175312195-26b88556-cd51-4aed-815c-8189558385bc.png)
+![image](https://user-images.githubusercontent.com/104465292/175318966-17ef9ada-0005-45fc-92de-bae7419410ff.png)
 
 ---
 ### Screenshot
